@@ -19,6 +19,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'figaro'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
