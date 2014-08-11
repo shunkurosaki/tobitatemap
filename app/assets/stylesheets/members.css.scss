@@ -1,0 +1,46 @@
+// Place all the styles related to the members controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.control-group {
+  margin: 30px 0;
+
+  label {
+    display: inline;
+    float: left;
+    width: 100px;
+    text-align: right;
+  }
+
+  .controls {
+    input {
+      margin-left: 20px;
+    }
+    textarea {
+      margin-left: 20px;
+      width: 60%;
+      height: 100px;
+    }
+    .text {
+      margin-left: 20px;
+    }
+    font#character {
+      float: right;
+      margin-right: 200px;
+    }
+  }
+}
+
+#submit {
+  text-align: center;
+  button {
+    width: 300px;
+    height: 45px;
+    background-color: #efaf02;
+    border-style: none;
+    color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
