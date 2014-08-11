@@ -1,8 +1,8 @@
-class MembersController < ApplicationController
+ class MembersController < ApplicationController
 
   def new
-    @member = Member.find(current_user.member.id)
-    if @member
+    if Member.exists?(:user_id => current_user.id)
+      @member = Member.find(current_user.member.id)
       render :edit
     end
     @member = Member.new
