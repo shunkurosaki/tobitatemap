@@ -1,3 +1,5 @@
+<%= javascript_include_tag javascript_path 'mapselect' %>
+
 <h2>プロフィール編集画面</h2>
 <%= form_for @member do |f| %>
   <div class="control-group">
@@ -54,14 +56,31 @@
     </div>
   </div>
   <div class="control-group">
-    <label for="member_profile">留学先:</label>
     <div class="controls">
       <%= f.hidden_field :latitude %>
       <%= f.hidden_field :longitude %>
-      <span class="text">自分の住む地域を中心に持ってきて下さい</span>
     </div>
   </div>
   <div id="submit">
     <%= f.button :submit %>
   </div>
 <% end %>
+
+<div class="control-group">
+  <label for="member_profile">留学先:</label>
+  <div class="controls">
+    <div class="study_location">
+      <span class="text">自分の住む地域を中心に持ってきて下さい（地図ドラッグorテキスト検索で緯度経度取得）</span>
+      <div id="search_box" style="margin-top:0.5em; margin-bottom:0.5em;"></div>
+      <div id="map_canvas" style="width:100%; background-color:white; margin-top:0.5em; margin-bottom:0.5em;"> Google Maps API is not available. </div>
+      <!--<table border="1" style="margin-top:0.5em; margin-bottom:0.5em; border-collapse:separate; border-spacing:0px;">
+        <tr>
+          <td class="center">緯度</td>
+          <td class="right" style="width:6em;"><span id="indicator_lat">36.0</span></td>
+          <td class="center">経度</td>
+          <td class="right"><span id="indicator_lng">136.5</span></td>
+        </tr>
+      </table>-->
+    </div>
+  </div>
+</div>
