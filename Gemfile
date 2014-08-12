@@ -22,6 +22,7 @@ gem 'binding_of_caller'
 gem 'figaro'
 gem 'devise'
 gem 'gon'
+gem 'passenger'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
