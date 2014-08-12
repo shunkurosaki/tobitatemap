@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 initialize = ->
-  latlng_shun = new google.maps.LatLng(37.792457, -122.393064)
+  latlng_shun = new google.maps.LatLng(gon.latitude, gon.longitude)
   latlng_adaniya = new google.maps.LatLng(31.791702, -7.092620)
 
   opts =

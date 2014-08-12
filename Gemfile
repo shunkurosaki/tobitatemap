@@ -21,6 +21,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'figaro'
 gem 'devise'
+gem 'gon'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
