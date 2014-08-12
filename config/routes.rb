@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :books
   resources :login
 
-  root :to => 'password#index'
+  root :to => 'map#index'
   get 'map' => 'map#index'
   get 'login' => 'login#index'
   get 'password' => 'password#index'
