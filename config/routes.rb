@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations'
+  }
+
   resources :books
   resources :login
 
@@ -8,7 +11,7 @@ Rails.application.routes.draw do
   get 'login' => 'login#index'
   get 'password' => 'password#index'
 
-  resources :members
+  resources :members, :only => [:show, :edit, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

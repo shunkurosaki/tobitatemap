@@ -1,23 +1,5 @@
  class MembersController < ApplicationController
 
-  def new
-    if Member.exists?(:user_id => current_user.id)
-      @member = Member.find(current_user.member.id)
-      render :edit
-    end
-    @member = Member.new
-  end
-
-  def create
-    @member = Member.new(member_params)
-    @member.user_id = current_user.id
-    if @member.save
-      redirect_to :controller => 'map', :action => 'index'
-    else
-      render :new
-    end
-  end
-
   def edit
     if current_user.member.id != params[:id].to_i
       redirect_to :controller => 'map', :action => 'index'
