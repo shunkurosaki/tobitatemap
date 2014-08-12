@@ -13,9 +13,9 @@
 
   def update
     @member = Member.find(current_user.member.id)
-    if params[:latitude] == 35.0 and params[:longitude] == 135.0
-      params.delete(:latitude)
-      params.delete(:longitude)
+    if params[:member][:latitude].to_i == 35 and params[:member][:longitude].to_i == 135
+      params[:member].delete(:latitude)
+      params[:member].delete(:longitude)
     end
     if @member.update_attributes(member_params)
       redirect_to :controller => 'map', :action => 'index'
