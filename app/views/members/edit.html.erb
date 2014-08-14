@@ -4,7 +4,7 @@
 <%= form_for @member do |f| %>
 <div class="span3">
   <%= f.label :image %>
-  <%= image_tag @member.image.thumb.url if @member.image? %>
+  <%= image_tag @member.image.url if @member.image? %>
   <%= f.file_field :image %>
   <%= f.hidden_field :image_cache %>
 </div>
