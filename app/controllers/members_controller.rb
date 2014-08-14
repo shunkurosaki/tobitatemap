@@ -1,4 +1,5 @@
  class MembersController < ApplicationController
+   before_filter :authenticate_user!,:only => [:edit,:update]
 
   def edit
     if current_user.member.id != params[:id].to_i
@@ -30,7 +31,7 @@
 
   private
     def member_params
-      params.require(:member).permit(:name, :city, :term, :link, :facebook, :twitter, :profile, :latitude, :longitude)
+      params.require(:member).permit(:name, :city, :term, :link, :facebook, :twitter, :profile, :latitude, :longitude, :image, :image_cache)
     end
 
 end

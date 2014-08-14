@@ -23,6 +23,8 @@ gem 'figaro'
 gem 'devise'
 gem 'gon'
 gem 'passenger'
+gem 'carrierwave'
+gem 'rmagick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

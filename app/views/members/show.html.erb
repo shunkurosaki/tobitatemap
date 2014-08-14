@@ -1,4 +1,8 @@
 <h2>プロフィール画面</h2>
+<div class="span3">
+  <%= image_tag @member.image.url %>
+</div>
+<div class="span8">
   <div class="control-group">
     <label for="member_name">Name:</label>
     <div class="controls">
@@ -54,3 +58,4 @@
       <span class="text"><%= @member.longitude %></span>
     </div>
   </div>
+</div>

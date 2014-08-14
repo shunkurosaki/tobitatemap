@@ -1,7 +1,14 @@
 <%= javascript_include_tag javascript_path 'mapselect' %>
-
 <h2>プロフィール編集画面</h2>
+
 <%= form_for @member do |f| %>
+<div class="span3">
+  <%= f.label :image %>
+  <%= image_tag @member.image.thumb.url if @member.image? %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+</div>
+<div class="span8">
   <div class="control-group">
     <label for="member_name">Name:</label>
     <div class="controls">
@@ -64,9 +71,10 @@
   <div id="submit">
     <%= f.button :submit %>
   </div>
+</div>
 <% end %>
 
-<div class="control-group">
+<div class="control-group span11">
   <label for="member_profile">留学先:</label>
   <div class="controls">
     <div class="study_location">
