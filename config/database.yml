@@ -51,5 +51,5 @@ test:
 production:
   <<: *default
   database: tobitatemap_production
-  username: tobitatemap
-  password: <%= ENV['TOBITATEMAP_DATABASE_PASSWORD'] %>
+  username: <%= ENV['TOBITATEMAP_USERNAME'] %>
+  password: <%= ENV['TOBITATEMAP_PASSWORD'] %>
