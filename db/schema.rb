@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20140814171440) do
     t.datetime "updated_at"
   end
 
+  create_table "logins", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "members", force: true do |t|
     t.string   "name"
     t.string   "city"

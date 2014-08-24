@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   root :to => 'map#index'
   get 'map' => 'map#index'
   get 'login' => 'login#index'
-  get 'password' => 'password#index'
 
   resources :members, :only => [:show, :edit, :update]
 
