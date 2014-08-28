@@ -18,6 +18,19 @@
       params[:member].delete(:latitude)
       params[:member].delete(:longitude)
     end
+
+    if params[:keywords].present?
+      params[:keywords].each do |key|
+        if Keyword.where(:name => key).exists?
+          keyword = Keyword.find_by_name(key)
+          @member.keywords << keyword if @member.keywords.pluck(:id).include?(keyword)
+        else
+          keyword = Keyword.create(:name => key)
+          @member.keywords << keyword
+        end
+      end
+    end
+
     if @member.update_attributes(member_params)
       redirect_to :controller => 'map', :action => 'index'
     else
