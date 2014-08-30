@@ -52,8 +52,8 @@
   <div class="control-group">
     <label for="member_keyword">Keyword:</label>
     <div class="controls">
-      <%= text_field_tag "keywords[]" %>
-      <%= text_field_tag "keywords[]" %>
+      <%= text_field_tag "keywords[]", @member.keywords[1].name if @member.keywords[1].present? %>
+      <%= text_field_tag "keywords[]", @member.keywords[2].name if @member.keywords[2].present? %>
     </div>
   </div>
   <div class="control-group">

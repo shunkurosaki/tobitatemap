@@ -24,7 +24,9 @@
   <div class="control-group">
     <label for="member_keyword">Keyword:</label>
     <div class="controls">
-      <span class="text">key word</span>
+      <% @member.keywords.each do |keyword| %>
+        <span class="text"><%= keyword.name %></span>
+      <% end %>
     </div>
   </div>
   <div class="control-group">
